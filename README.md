@@ -2,7 +2,7 @@
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/permissions) ](https://repo1.maven.org/maven2/dev/icerock/moko/permissions) ![kotlin-version](https://kotlin-version.aws.icerock.dev/kotlin-version?group=dev.icerock.moko&name=permissions)
 
 # Mobile Kotlin runtime permissions multiplatform controller
-**moko-permissions** - Kotlin MultiPlatform library for providing runtime permissions on iOS & Android.
+**moko-permissions** - Kotlin MultiPlatform library for providing runtime permissions on iOS, Android & Desktop.
 
 ## Table of Contents
 - [Features](#features)
