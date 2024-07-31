@@ -27,8 +27,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":permissions"))
-    implementation(project(":permissions"))
     commonMainImplementation(libs.coroutines)
     androidMainImplementation(libs.activity)
     androidMainImplementation(libs.lifecycleRuntime)
