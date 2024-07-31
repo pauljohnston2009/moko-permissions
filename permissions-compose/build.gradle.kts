@@ -14,10 +14,9 @@ kotlin {
     jvm("desktop")
 
     sourceSets {
+        val commonMain by getting
         val desktopMain by getting {
-            dependencies {
-                implementation(compose.desktop.currentOs)
-            }
+            dependsOn(commonMain)
         }
     }
 }

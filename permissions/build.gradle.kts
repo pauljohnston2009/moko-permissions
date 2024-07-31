@@ -7,17 +7,15 @@ plugins {
     id("dev.icerock.moko.gradle.publication")
     id("dev.icerock.moko.gradle.stub.javadoc")
     id("dev.icerock.moko.gradle.detekt")
-    id("org.jetbrains.compose")
 }
 
 kotlin {
     jvm("desktop")
 
     sourceSets {
+        val commonMain by getting
         val desktopMain by getting {
-            dependencies {
-                implementation(compose.desktop.currentOs)
-            }
+            dependsOn(commonMain)
         }
     }
 }
