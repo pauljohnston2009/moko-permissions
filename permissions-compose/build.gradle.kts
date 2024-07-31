@@ -10,6 +10,18 @@ plugins {
     id("org.jetbrains.compose")
 }
 
+kotlin {
+    jvm("desktop")
+
+    sourceSets {
+        val desktopMain by getting {
+            dependencies {
+                implementation(compose.desktop.currentOs)
+            }
+        }
+    }
+}
+
 android {
     namespace = "dev.icerock.moko.permissions.compose"
 

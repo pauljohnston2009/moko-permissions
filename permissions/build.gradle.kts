@@ -7,6 +7,19 @@ plugins {
     id("dev.icerock.moko.gradle.publication")
     id("dev.icerock.moko.gradle.stub.javadoc")
     id("dev.icerock.moko.gradle.detekt")
+    id("org.jetbrains.compose")
+}
+
+kotlin {
+    jvm("desktop")
+
+    sourceSets {
+        val desktopMain by getting {
+            dependencies {
+                implementation(compose.desktop.currentOs)
+            }
+        }
+    }
 }
 
 android {
@@ -14,6 +27,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":permissions"))
+    implementation(project(":permissions"))
     commonMainImplementation(libs.coroutines)
     androidMainImplementation(libs.activity)
     androidMainImplementation(libs.lifecycleRuntime)
