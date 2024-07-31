@@ -1,18 +1,23 @@
 [versions]
-kotlinVersion = "1.9.10"
-androidAppCompatVersion = "1.6.1"
-composeMaterialVersion = "1.4.1"
-composeActivityVersion = "1.7.0"
-activityVersion = "1.7.0"
-materialDesignVersion = "1.8.0"
+agp = "8.2.2"
+kotlinVersion = "1.9.23"
+androidAppCompatVersion = "1.7.0"
+composeMaterialVersion = "1.6.8"
+composeActivityVersion = "1.9.1"
+activityVersion = "1.9.1"
+materialDesignVersion = "1.12.0"
 androidLifecycleVersion = "2.2.0"
 androidCoreTestingVersion = "2.2.0"
-coroutinesVersion = "1.6.4"
+coroutinesVersion = "1.8.1"
 mokoMvvmVersion = "0.16.0"
 mokoPermissionsVersion = "0.18.0"
-composeJetBrainsVersion = "1.5.1"
-lifecycleRuntime = "2.6.1"
-composeUiVersion = "1.0.1"
+composeJetBrainsVersion = "1.6.11"
+lifecycleRuntime = "2.8.4"
+composeUiVersion = "1.6.8"
+nexusPublishVersion = "1.1.0"
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
 
 [libraries]
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
@@ -29,11 +34,16 @@ mokoMvvmTest = { module = "dev.icerock.moko:mvvm-test", version.ref = "mokoMvvmV
 kotlinTestJUnit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
 androidCoreTesting = { module = "androidx.arch.core:core-testing", version.ref = "androidCoreTestingVersion" }
 
-
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
-androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.4.2" }
-mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.2.0" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "8.2.2" }
+#mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.3.0" }
 mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.2" }
 kotlinSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
 composeJetBrainsGradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeJetBrainsVersion" }
-detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.22.0" }
+detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.6" }
+nexusPublishGradlePlugin = { module = "io.github.gradle-nexus:publish-plugin", version.ref = "nexusPublishVersion" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "composeJetBrainsVersion" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinVersion" }

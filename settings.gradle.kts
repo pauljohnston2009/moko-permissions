@@ -8,6 +8,11 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         google()
+        sourceControl {
+            gitRepository(uri("https://github.com/pauljohnston2009/moko-gradle-plugin.git")) {
+                producesModule("dev.icerock.moko:moko-gradle-plugin")
+            }
+        }
     }
 }
 

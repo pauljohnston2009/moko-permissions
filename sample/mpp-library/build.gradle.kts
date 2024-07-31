@@ -5,7 +5,6 @@
 plugins {
     id("dev.icerock.moko.gradle.multiplatform.mobile")
     id("dev.icerock.mobile.multiplatform.ios-framework")
-    id("dev.icerock.moko.gradle.detekt")
 }
 
 dependencies {
@@ -18,6 +17,15 @@ dependencies {
 
     commonTestImplementation(libs.mokoMvvmTest)
     commonTestImplementation(projects.permissionsTest)
+}
+
+android {
+    namespace = "dev.icerock.moko.samples.permissions"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
 framework {

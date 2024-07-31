@@ -6,7 +6,6 @@ plugins {
     id("dev.icerock.moko.gradle.multiplatform.mobile")
     id("dev.icerock.moko.gradle.publication")
     id("dev.icerock.moko.gradle.stub.javadoc")
-    id("dev.icerock.moko.gradle.detekt")
     id("org.jetbrains.compose")
 }
 
@@ -26,6 +25,11 @@ android {
 
     defaultConfig {
         minSdk = 21
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 

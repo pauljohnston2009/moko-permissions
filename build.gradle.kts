@@ -12,11 +12,14 @@ buildscript {
     dependencies {
         classpath(libs.kotlinGradlePlugin)
         classpath(libs.androidGradlePlugin)
-        classpath(libs.mokoGradlePlugin)
+        classpath("dev.icerock.moko:moko-gradle-plugin") {
+            version {
+                branch = "master"
+            }
+        }
         classpath(libs.mobileMultiplatformGradlePlugin)
         classpath(libs.kotlinSerializationGradlePlugin)
         classpath(libs.composeJetBrainsGradlePlugin)
-        classpath(libs.detektGradlePlugin)
     }
 }
 
