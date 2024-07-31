@@ -12,7 +12,7 @@ mokoMvvmVersion = "0.16.0"
 mokoPermissionsVersion = "0.18.0"
 composeJetBrainsVersion = "1.5.1"
 lifecycleRuntime = "2.6.1"
-composeUiVersion = "1.6.8"
+composeUiVersion = "1.0.1"
 
 [libraries]
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
@@ -37,7 +37,3 @@ mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform",
 kotlinSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
 composeJetBrainsGradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeJetBrainsVersion" }
 detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.22.0" }
-
-[plugins]
-#kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinVersion" }
-#jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "composeJetBrainsVersion" }

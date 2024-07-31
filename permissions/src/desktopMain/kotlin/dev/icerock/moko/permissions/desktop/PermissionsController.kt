@@ -22,9 +22,7 @@ class PermissionsController : PermissionsControllerProtocol {
         return getDelegate(permission).getPermissionState()
     }
 
-    override fun openAppSettings() {
-
-    }
+    override fun openAppSettings() {}
 
     private fun getDelegate(permission: Permission): PermissionDelegate {
         // for now just allow all access
